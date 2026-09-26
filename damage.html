@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ย้ายแล้ว · Moved · Bangkok Flood Help</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html">
+<!-- Without JavaScript: go to the new address after 1 second. -->
+<meta http-equiv="refresh" content="1; url=https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html">
+<script>
+// With JavaScript: release this old site's offline copy (service worker + its caches) on this
+// phone, then go straight to the same page on the new address, keeping ?query and #hash.
+(function () {
+  var oldPath = "/bangkok-flood-hub/", newBase = "https://bkkfloodhelp.github.io/bangkok-flood-hub/";
+  var rest = location.pathname.indexOf(oldPath) === 0 ? location.pathname.slice(oldPath.length) : "";
+  if (/(^|\/)(index|404)\.html$/.test(rest)) rest = rest.replace(/(index|404)\.html$/, "");
+  var go = function () { location.replace(newBase + rest + location.search + location.hash); };
+  var jobs = [];
+  try {
+    if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (rs) {
+      return Promise.all(rs.map(function (r) { return r.unregister(); }));
+    }));
+    if (window.caches) jobs.push(caches.keys().then(function (ks) {
+      return Promise.all(ks.filter(function (k) { return k.indexOf("flood-hub-") === 0; }).map(function (k) { return caches.delete(k); }));
+    }));
+  } catch (e) {}
+  Promise.all(jobs).then(go, go);
+  setTimeout(go, 800); // never wait long for the clean-up
+})();
+</script>
+<style>
+body{margin:0;padding:24px 16px;font-family:"IBM Plex Sans Thai",system-ui,sans-serif;font-size:17px;line-height:1.6;background:#f3f6f8;color:#0f2233}
+a{color:#1d5c8a;font-weight:700;word-break:break-all}
+@media (prefers-color-scheme:dark){body{background:#0c1822;color:#e6eef4}a{color:#6fb1e0}}
+</style>
+</head>
+<body>
+<p>เว็บไซต์ข้อมูลช่วยเหลือน้ำท่วม กรุงเทพฯ ย้ายไปที่อยู่ใหม่แล้ว<br><a href="https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html">https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html</a></p>
+<p lang="en">Bangkok flood help has moved to<br><a href="https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html">https://bkkfloodhelp.github.io/bangkok-flood-hub/damage.html</a></p>
+<p>เหตุฉุกเฉินโทร <a href="tel:1669">1669</a> หรือ <a href="tel:1555">1555</a><br><span lang="en">In an emergency call <a href="tel:1669">1669</a> or <a href="tel:1555">1555</a></span></p>
+</body>
+</html>
